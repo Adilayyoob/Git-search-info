@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Git Detail Search</title>
+    </head>
+    <body>
+        <label>Enter User name</label>
+        <form name="form1" action="#">
+            <input type="text" name="username">
+            <input type="button" value="submit" onclick="search()">
+        </form>
+        
+        <script>
+            function search(){
+                var username = document.form1.username.value;
+                var url = "https://api.github.com/users/" + username;
+                window.open(url);
+            }
+        </script>
+    </body>
+</html>
